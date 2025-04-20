@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -9,8 +8,17 @@ const Index = () => {
   return (
     <MainLayout>
       {/* Hero Section */}
-      <section className="relative blood-drop-bg">
-        <div className="container mx-auto px-4 py-16 md:py-24">
+      <section className="relative min-h-[600px] flex items-center">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
+          style={{
+            backgroundImage: "url('/lovable-uploads/f6a598fa-5bea-431c-9656-deeb92d7308d.png')",
+            backgroundSize: "contain",
+            backgroundPosition: "center",
+            opacity: 0.15
+          }}
+        />
+        <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Connect Blood Donors with Those in Need
