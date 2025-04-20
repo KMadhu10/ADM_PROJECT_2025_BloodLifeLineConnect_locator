@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
@@ -89,7 +90,7 @@ const Login = () => {
       <div 
         className="min-h-screen bg-cover bg-center relative" 
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=2000&q=80')",
+          backgroundImage: "url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=2000&q=80')",
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/50" />
