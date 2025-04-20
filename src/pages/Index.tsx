@@ -41,13 +41,7 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-white relative">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-5"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1615461066841-6116e61058f4?q=80&w=1000&auto=format&fit=crop')",
-          }}
-        />
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">How It Works</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -88,14 +82,7 @@ const Index = () => {
       </section>
 
       {/* Blood Types Section */}
-      <section className="py-16 relative overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.03]"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=1000&auto=format&fit=crop')",
-          }}
-        />
-        <div className="absolute inset-0 bg-gray-50 bg-opacity-90" />
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Blood Type Compatibility</h2>
@@ -162,13 +149,7 @@ const Index = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-white relative">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-5"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1584362917165-526a968579e8?q=80&w=1000&auto=format&fit=crop')",
-          }}
-        />
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Why Choose Blood Lifeline?</h2>
@@ -247,13 +228,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-blood-600 text-white relative overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1536856136534-bb679c52a9aa?q=80&w=1000&auto=format&fit=crop')",
-          }}
-        />
+      <section className="py-16 bg-blood-600 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Ready to Make a Difference?</h2>
