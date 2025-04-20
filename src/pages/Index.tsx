@@ -9,15 +9,6 @@ const Index = () => {
     <MainLayout>
       {/* Hero Section */}
       <section className="relative min-h-[600px] flex items-center">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
-          style={{
-            backgroundImage: "url('/lovable-uploads/f6a598fa-5bea-431c-9656-deeb92d7308d.png')",
-            backgroundSize: "contain",
-            backgroundPosition: "center",
-            opacity: 0.15
-          }}
-        />
         <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="text-center md:text-left">
@@ -39,9 +30,9 @@ const Index = () => {
             </div>
             <div className="hidden md:block">
               <img
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80"
-                alt="Blood donation"
-                className="rounded-lg shadow-xl w-full h-[400px] object-cover"
+                src="/lovable-uploads/343dbf67-2a3d-4e4d-88fc-7bd0dafb4dd3.png"
+                alt="Blood donation illustration"
+                className="w-full max-w-[500px] mx-auto"
               />
             </div>
           </div>
