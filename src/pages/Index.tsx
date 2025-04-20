@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -9,7 +8,7 @@ const Index = () => {
   return (
     <MainLayout>
       {/* Hero Section */}
-      <section className="relative blood-drop-bg">
+      <section className="relative blood-drop-bg bg-gradient-to-br from-white via-blue-50 to-white">
         <div className="container mx-auto px-4 py-16 md:py-24">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
