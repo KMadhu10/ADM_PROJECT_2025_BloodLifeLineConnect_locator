@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
@@ -25,7 +24,6 @@ const Login = () => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
     
-    // Clear error for this field when user starts typing
     if (errors[name]) {
       setErrors(prev => {
         const newErrors = { ...prev };
@@ -66,7 +64,6 @@ const Login = () => {
     setIsLoading(true);
     
     try {
-      // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1500));
       
       toast({
@@ -74,7 +71,6 @@ const Login = () => {
         description: "Welcome back to Blood Lifeline.",
       });
       
-      // For demonstration, we'll redirect to donor dashboard
       navigate("/donor-dashboard");
     } catch (error) {
       console.error("Login error:", error);
@@ -90,83 +86,91 @@ const Login = () => {
   
   return (
     <MainLayout>
-      <div className="container mx-auto px-4 py-12">
-        <div className="max-w-md mx-auto">
-          <div className="bg-white rounded-lg shadow-sm border p-8">
-            <div className="text-center mb-8">
-              <h1 className="text-2xl font-bold">Welcome Back</h1>
-              <p className="text-gray-600 mt-2">
-                Log in to your Blood Lifeline account
-              </p>
-            </div>
-            
-            <form onSubmit={handleSubmit}>
-              <div className="space-y-4">
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email Address</Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="your@email.com"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className={errors.email ? "border-red-500" : ""}
-                  />
-                  {errors.email && (
-                    <p className="text-red-500 text-sm">{errors.email}</p>
-                  )}
-                </div>
-                
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between">
-                    <Label htmlFor="password">Password</Label>
-                    <Link to="/forgot-password" className="text-sm text-blood-600 hover:underline">
-                      Forgot password?
-                    </Link>
-                  </div>
-                  <Input
-                    id="password"
-                    name="password"
-                    type="password"
-                    placeholder="••••••••"
-                    value={formData.password}
-                    onChange={handleChange}
-                    className={errors.password ? "border-red-500" : ""}
-                  />
-                  {errors.password && (
-                    <p className="text-red-500 text-sm">{errors.password}</p>
-                  )}
-                </div>
-                
-                <div className="flex items-center space-x-2">
-                  <Checkbox 
-                    id="rememberMe" 
-                    checked={formData.rememberMe} 
-                    onCheckedChange={handleCheckboxChange} 
-                  />
-                  <Label htmlFor="rememberMe" className="text-sm cursor-pointer">
-                    Remember me for 30 days
-                  </Label>
-                </div>
-                
-                <Button 
-                  type="submit" 
-                  className="w-full bg-blood-600 hover:bg-blood-700 mt-2"
-                  disabled={isLoading}
-                >
-                  {isLoading ? "Logging in..." : "Log In"}
-                </Button>
+      <div 
+        className="min-h-screen bg-cover bg-center relative" 
+        style={{
+          backgroundImage: "url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=2000&q=80')",
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/50" />
+        <div className="container mx-auto px-4 py-12 relative z-10">
+          <div className="max-w-md mx-auto">
+            <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-lg border p-8">
+              <div className="text-center mb-8">
+                <h1 className="text-2xl font-bold">Welcome Back</h1>
+                <p className="text-gray-600 mt-2">
+                  Log in to your Blood Lifeline account
+                </p>
               </div>
-            </form>
-            
-            <div className="mt-6 text-center text-sm">
-              <p className="text-gray-600">
-                Don't have an account?{" "}
-                <Link to="/register" className="text-blood-600 hover:underline font-medium">
-                  Create one now
-                </Link>
-              </p>
+              
+              <form onSubmit={handleSubmit}>
+                <div className="space-y-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="email">Email Address</Label>
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      placeholder="your@email.com"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className={errors.email ? "border-red-500" : ""}
+                    />
+                    {errors.email && (
+                      <p className="text-red-500 text-sm">{errors.email}</p>
+                    )}
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <div className="flex items-center justify-between">
+                      <Label htmlFor="password">Password</Label>
+                      <Link to="/forgot-password" className="text-sm text-blood-600 hover:underline">
+                        Forgot password?
+                      </Link>
+                    </div>
+                    <Input
+                      id="password"
+                      name="password"
+                      type="password"
+                      placeholder="••••••••"
+                      value={formData.password}
+                      onChange={handleChange}
+                      className={errors.password ? "border-red-500" : ""}
+                    />
+                    {errors.password && (
+                      <p className="text-red-500 text-sm">{errors.password}</p>
+                    )}
+                  </div>
+                  
+                  <div className="flex items-center space-x-2">
+                    <Checkbox 
+                      id="rememberMe" 
+                      checked={formData.rememberMe} 
+                      onCheckedChange={handleCheckboxChange} 
+                    />
+                    <Label htmlFor="rememberMe" className="text-sm cursor-pointer">
+                      Remember me for 30 days
+                    </Label>
+                  </div>
+                  
+                  <Button 
+                    type="submit" 
+                    className="w-full bg-blood-600 hover:bg-blood-700 mt-2"
+                    disabled={isLoading}
+                  >
+                    {isLoading ? "Logging in..." : "Log In"}
+                  </Button>
+                </div>
+              </form>
+              
+              <div className="mt-6 text-center text-sm">
+                <p className="text-gray-600">
+                  Don't have an account?{" "}
+                  <Link to="/register" className="text-blood-600 hover:underline font-medium">
+                    Create one now
+                  </Link>
+                </p>
+              </div>
             </div>
           </div>
         </div>
