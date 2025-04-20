@@ -14,6 +14,8 @@ import DonorDashboard from "./pages/DonorDashboard";
 import BloodRequest from "./pages/BloodRequest";
 import RequestStatus from "./pages/RequestStatus";
 import FindDonors from "./pages/FindDonors";
+import FAQ from "./pages/FAQ";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -33,6 +35,8 @@ const App = () => (
           <Route path="/request" element={<BloodRequest />} />
           <Route path="/request-status" element={<RequestStatus />} />
           <Route path="/donors" element={<FindDonors />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

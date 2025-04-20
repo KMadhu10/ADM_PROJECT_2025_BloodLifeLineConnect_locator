@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -23,9 +22,6 @@ const Header: React.FC = () => {
         <nav className="hidden md:flex items-center space-x-6">
           <Link to="/" className="text-gray-700 hover:text-blood-600 transition-colors">
             Home
-          </Link>
-          <Link to="/about" className="text-gray-700 hover:text-blood-600 transition-colors">
-            About
           </Link>
           <Link to="/donors" className="text-gray-700 hover:text-blood-600 transition-colors">
             Find Donors
@@ -66,13 +62,6 @@ const Header: React.FC = () => {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Home
-            </Link>
-            <Link 
-              to="/about" 
-              className="text-gray-700 hover:text-blood-600 transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              About
             </Link>
             <Link 
               to="/donors" 
