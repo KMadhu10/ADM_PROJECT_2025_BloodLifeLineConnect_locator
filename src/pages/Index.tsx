@@ -19,21 +19,30 @@ const Index = () => {
           }}
         />
         <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Connect Blood Donors with Those in Need
-            </h1>
-            <p className="text-xl text-gray-600 mb-8">
-              Join our community to help save lives through blood donation. 
-              Find donors, request blood, or become a donor today.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button className="bg-blood-600 hover:bg-blood-700 text-lg h-12 px-8" asChild>
-                <Link to="/register?role=donor">Become a Donor</Link>
-              </Button>
-              <Button variant="outline" className="border-blood-600 text-blood-600 hover:bg-blood-50 text-lg h-12 px-8" asChild>
-                <Link to="/request">Request Blood</Link>
-              </Button>
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="text-center md:text-left">
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Connect Blood Donors with Those in Need
+              </h1>
+              <p className="text-xl text-gray-600 mb-8">
+                Join our community to help save lives through blood donation. 
+                Find donors, request blood, or become a donor today.
+              </p>
+              <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+                <Button className="bg-blood-600 hover:bg-blood-700 text-lg h-12 px-8" asChild>
+                  <Link to="/register?role=donor">Become a Donor</Link>
+                </Button>
+                <Button variant="outline" className="border-blood-600 text-blood-600 hover:bg-blood-50 text-lg h-12 px-8" asChild>
+                  <Link to="/request">Request Blood</Link>
+                </Button>
+              </div>
+            </div>
+            <div className="hidden md:block">
+              <img
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80"
+                alt="Blood donation"
+                className="rounded-lg shadow-xl w-full h-[400px] object-cover"
+              />
             </div>
           </div>
         </div>
